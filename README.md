@@ -1,6 +1,18 @@
 # Дисковый инструментарий эникейщика
 
+[![Релиз](https://img.shields.io/github/v/release/vouning/DiskTool?style=flat-square&label=%D1%80%D0%B5%D0%BB%D0%B8%D0%B7)](https://github.com/vouning/DiskTool/releases/latest)
+[![Лицензия MIT](https://img.shields.io/badge/%D0%BB%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F-MIT-7A5757?style=flat-square)](LICENSE)
+
+## 📥 Скачать готовую программу
+
+**[DiskTool.exe](https://github.com/vouning/DiskTool/releases/latest)** — на странице
+[Releases](https://github.com/vouning/DiskTool/releases/latest) (раздел «Assets»).
+Скачали → двойной клик → подтвердили UAC → работает. Ничего устанавливать не нужно,
+нужна только Windows 10/11 (консоль не требуется, прав администратора запрашивается).
+
 ## Состав
+- `DiskTool.exe` — **готовый EXE**: сам просит права администратора, консоль
+  не запускается (собран из `disk-tool-gui.ps1` через PS2EXE)
 - `disk-tool-gui.ps1` — **GUI-интерфейс** (WinForms, без зависимостей): скан,
   перенос данных с битых секторов, изоляция битых секторов, лог в окне
 - `disk-scan.ps1`   — сканер: SMART, здоровье, температура, место на дисках, разделы
@@ -60,3 +72,7 @@ powershell -ExecutionPolicy Bypass -File disk-repair.ps1 -Drive C -Mode Full
 - Рост `Ошибки_чт` / `Ошибки_зап` → накопитель деградирует.
 - `Износ` > 90% (SSD) → ресурс ячеек на исходе.
 - `Свободно_%` диска системного тома < 15% → замедление, чистить.
+
+## Лицензия
+MIT License — свободно используйте, изменяйте и распространяйте.
+Подробности в файле [LICENSE](LICENSE).
